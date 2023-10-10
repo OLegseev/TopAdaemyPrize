@@ -1,0 +1,44 @@
+﻿<Page x:Class="TopAcademyPrize.Prizes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TopAcademyPrize"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+
+     FontFamily="{DynamicResource MaterialDesignFont}"
+      mc:Ignorable="d" 
+      d:DesignHeight="371" d:DesignWidth="800"
+      Background="White"
+      Title="Prizes">
+
+    <Grid>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"></ColumnDefinition>
+            <ColumnDefinition Width="44*"></ColumnDefinition>
+            <ColumnDefinition Width="33*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border CornerRadius="20" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="2" Background="#d91842" BorderBrush="black"  Height="268" Width="267" Grid.Column="1" Margin="0,60,0,0"/>
+
+        <ComboBox materialDesign:HintAssist.Hint="Выберите приз" x:Name="Com" HorizontalAlignment="Center"  Width="110" Grid.Column="1" Margin="0,133,0,0" VerticalAlignment="Top" Height="23"/>
+        <TextBox x:Name="num" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="76"  Grid.Column="1" Margin="0,194,0,0" Height="23"/>
+        <Button Background="black" Content="Добавить" HorizontalAlignment="Center" BorderBrush="black" VerticalAlignment="Top" Height="28" Width="104" Grid.Column="1" Margin="0,265,0,0" Click="Button_Click"/>
+        <Label MouseLeftButtonDown="Label_MouseLeftButtonDown" Content="Готово" HorizontalAlignment="Center" Margin="0,333,0,0" VerticalAlignment="Top" Foreground="#DD006DFF" Grid.Column="1" Height="22" Width="58"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Margin="0,171,0,0" Height="14" ><Run Text="Количество п"/><Run Text="о"/><Run Text="зиций"/></TextBlock>
+    </Grid>
+</Page>
